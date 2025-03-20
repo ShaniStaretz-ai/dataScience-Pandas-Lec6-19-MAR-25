@@ -21,4 +21,11 @@ Pandas functions 3
   * function of numpy: np.vectorize(measure_tip)(df_copy['total_bill'],df_copy['tip'])
   * receive callback function and sends the required the callback's parameters
   * works with lambda function
-* 
+* to change display title you can edit it with Markdown in custom function:
+```
+from IPython.display import Markdown,display
+def printmd(message,data):
+    text="**<u>"+message+"</u>**"
+    display(Markdown(text),data)
+printmd("5 first:",df_hw_mobile.head()) # will print the title: '5 first:' in bold and underline
+```
